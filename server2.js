@@ -8,7 +8,12 @@ http.createServer(function (req, res) {
     // 'Access-Control-Allow-Origin': '*'
     // 发起请求的域名
     // 允许多域：通过 req.host 等动态判断
-    'Access-Control-Allow-Origin': 'http://127.0.0.1:8888'
+    'Access-Control-Allow-Origin': 'http://127.0.0.1:8888',
+    // 会多出一个 requestMethods为 OPTIONS 的请求
+    'Access-Control-Allow-Headers': 'X-Test-Cors',
+    'Access-Control-Allow-Methods': 'POST, PUT, Delete',
+    // 1000s 之内，不需要预请求验证了
+    // 'Access-Control-Max-Age': '1000'
   })
 
   res.end('{"data": 123}');
