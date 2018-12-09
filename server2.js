@@ -8,7 +8,6 @@ http.createServer(function (req, res) {
     // 'Access-Control-Allow-Origin': '*'
     // 发起请求的域名
     // 'Access-Control-Allow-Origin': 'http://127.0.0.1:8888'
-    'Content-Type': 'application/JSON'
   })
 
   // res.end('{"data": 123}');
